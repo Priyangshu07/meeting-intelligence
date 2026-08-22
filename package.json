@@ -1,0 +1,16 @@
+{
+  "name": "meeting-intelligence",
+  "version": "1.0.0",
+  "description": "AI-powered meeting summarizer: transcribes audio with Groq ASR and analyzes with Google Gemini",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && node --env-file=../.env server.js",
+    "dev:frontend": "cd frontend && npx vite --port 5173",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "start": "cd backend && node --env-file=../.env server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

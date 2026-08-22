@@ -1,0 +1,19 @@
+{
+  "name": "meeting-intelligence-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Meeting Intelligence",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "better-sqlite3": "^11.5.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "groq-sdk": "^0.8.0",
+    "multer": "^2.0.0"
+  }
+}
