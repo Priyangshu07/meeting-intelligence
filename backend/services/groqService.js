@@ -1,5 +1,6 @@
 import Groq from 'groq-sdk';
 import { Readable } from 'stream';
+import { File } from 'node:buffer';
 
 const SUPPORTED_FORMATS = [
   'audio/flac', 'audio/mp3', 'audio/mpeg', 'audio/mpga',
@@ -64,13 +65,13 @@ export async function transcribeAudio(fileBuffer, filename) {
   const client = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
   // Convert Buffer to a File-like object that Groq SDK accepts
-  const readable = Readable.from(fileBuffer);
-  readable.path = filename; // Groq SDK uses this to determine content-type
+  const file = new File([fileBuffer], filename, { type: 'audio/' + filename.split('.').pop() });
+    // Groq SDK uses this to determine content-type
 
   let transcription;
   try {
     transcription = await client.audio.transcriptions.create({
-      file: readable,
+      file: file,
       model: 'whisper-large-v3-turbo',
       response_format: 'json',
     });

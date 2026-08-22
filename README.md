@@ -24,7 +24,7 @@ Modern teams record hundreds of hours of meetings, but extracting value from rec
 
 A two-stage AI pipeline:
 1. **Groq Whisper** (whisper-large-v3-turbo) — ultra-fast, accurate speech-to-text transcription
-2. **Google Gemini** (gemini-1.5-flash) — structured meeting analysis with carefully engineered prompts
+2. **Google Gemini** (gemini-2.5-flash) — structured meeting analysis with carefully engineered prompts
 
 The result is a clean, shareable meeting intelligence report in seconds.
 
@@ -60,7 +60,7 @@ EXPRESS BACKEND
   ├─► Groq ASR API (whisper-large-v3-turbo)
   │     └─► Real transcript text
   │
-  ├─► Gemini LLM API (gemini-1.5-flash)
+  ├─► Gemini LLM API (gemini-2.5-flash)
   │     └─► Structured JSON: summary, key_points, decisions, action_items
   │
   └─► SQLite (better-sqlite3)
@@ -95,7 +95,7 @@ GEMINI 1.5 FLASH
 | Frontend | Vite + Vanilla JS + CSS |
 | Backend | Node.js + Express |
 | ASR | Groq `whisper-large-v3-turbo` |
-| LLM | Google Gemini `gemini-1.5-flash` |
+| LLM | Google Gemini `gemini-2.5-flash` |
 | Storage | SQLite via `better-sqlite3` |
 | File upload | `multer` (memory storage) |
 

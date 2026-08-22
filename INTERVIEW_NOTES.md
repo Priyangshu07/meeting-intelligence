@@ -9,7 +9,7 @@ These notes match the actual implemented code. Use them to prepare for your inte
 Meeting Intelligence converts raw meeting audio recordings into structured, actionable intelligence using a two-stage AI pipeline:
 
 1. **Transcription** — Groq Whisper (whisper-large-v3-turbo) converts speech to text
-2. **Analysis** — Google Gemini (gemini-1.5-flash) analyzes the transcript and extracts: summary, key discussion points, confirmed decisions, and action items
+2. **Analysis** — Google Gemini (gemini-2.5-flash) analyzes the transcript and extracts: summary, key discussion points, confirmed decisions, and action items
 
 The result is a clean meeting intelligence report with an action item table (task · owner · deadline · priority) that teams can immediately act on.
 
@@ -46,7 +46,7 @@ Express Server (Node.js)
 6. SQLite record created (status: 'processing')
 7. Groq SDK sends the Buffer to whisper-large-v3-turbo
 8. Groq returns real transcript text
-9. Gemini SDK sends transcript + engineered prompt to gemini-1.5-flash
+9. Gemini SDK sends transcript + engineered prompt to gemini-2.5-flash
 10. Gemini returns structured JSON (summary, key_points, decisions, action_items)
 11. JSON validated and normalized
 12. SQLite record updated (status: 'completed')
@@ -99,7 +99,7 @@ This ensures the **actual audio bytes** from the browser reach the Groq API. We 
 
 ## Gemini Analysis
 
-**Model:** `gemini-1.5-flash`
+**Model:** `gemini-2.5-flash`
 
 **Why Gemini Flash?**
 - Fast and cost-effective for structured extraction
