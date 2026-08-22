@@ -4,7 +4,7 @@
 
 [![Assignment](https://img.shields.io/badge/Assignment-Meeting%20Summarizer-6366f1)](https://github.com/Priyangshu07/meeting-intelligence)
 [![ASR](https://img.shields.io/badge/ASR-Groq%20Whisper%20Large%20V3%20Turbo-orange)](https://console.groq.com)
-[![LLM](https://img.shields.io/badge/LLM-Google%20Gemini%201.5%20Flash-blue)](https://aistudio.google.com)
+[![LLM](https://img.shields.io/badge/LLM-Google%20Gemini%202.5%20Flash-blue)](https://aistudio.google.com)
 
 ---
 
@@ -33,7 +33,7 @@ The result is a clean, shareable meeting intelligence report in seconds.
 ## Features
 
 - 🎙️ **Real audio transcription** via Groq Whisper large-v3-turbo
-- 🤖 **AI-powered analysis** via Google Gemini 1.5 Flash
+- 🤖 **AI-powered analysis** via Google Gemini 2.5 Flash
 - 📋 **Structured output**: summary · key points · confirmed decisions · action items
 - 📊 **Action item table**: task · owner · deadline · priority
 - 📝 **Full transcript viewer** (collapsible)
@@ -78,7 +78,7 @@ GROQ whisper-large-v3-turbo
     ↓
 REAL TRANSCRIPT
     ↓
-GEMINI 1.5 FLASH
+GEMINI 2.5 FLASH
 (engineered prompt with anti-hallucination rules)
     ↓
 ┌──────────┬──────────┬──────────────┐
@@ -190,7 +190,7 @@ Open [http://localhost:5173](http://localhost:5173)
 | Action items | Structured table with task/owner/deadline/priority |
 | ASR API integration | `groq-sdk` with real file bytes |
 | Backend to store/process | Express + SQLite |
-| LLM for summary | Gemini 1.5 Flash with engineered prompt |
+| LLM for summary | Gemini 2.5 Flash with engineered prompt |
 | Key decisions | Separate "Confirmed Decisions" section |
 | GitHub repository | This repository |
 | README | This document |
