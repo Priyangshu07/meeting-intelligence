@@ -7,7 +7,11 @@
 [![LLM](https://img.shields.io/badge/LLM-Google%20Gemini%202.5%20Flash-blue)](https://aistudio.google.com)
 
 ---
+## 🎥 Demo Video
 
+[▶️ Watch the Meeting Intelligence Demo]https://youtu.be/rrOxeMsaAEU?si=9OaEikZmlVJt13A-
+
+---
 ## Overview
 
 Meeting Intelligence is a full-stack AI application that transforms raw meeting audio into structured, actionable intelligence. Upload any meeting recording, and the application produces a text transcript, executive summary, key discussion points, confirmed decisions, and action items — all powered by real AI APIs.
